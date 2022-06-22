@@ -6,7 +6,7 @@ import styles from './components/styles';
 const App = () => {
   return (
     <View style={styles.container}>
-      <Text style={[styles.title,styles.warning]}>Hello React Native2</Text>
+      <Text style={[styles.title,styles.warning]}>Hello React Native</Text>
       <Logo/>
     </View>
   )
