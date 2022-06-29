@@ -9,7 +9,8 @@ const App = () => {
   return (
     <View style={styles.container}>
       <Text >Button Example</Text>
-      <Button
+      <Button 
+      color='purple'
       onPress={showData}
       title='Click Me'
       />
