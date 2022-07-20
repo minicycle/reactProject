@@ -34,7 +34,7 @@ const Touchable_Example = () => {
             <TouchableOpacity
                 style={styles.button}
                 onPress={()=>onPress('TouchableOpacity Pressed')}>
-                    <Text>Touchable Highlight</Text> 
+                    <Text>Touchable Opacity</Text> 
             </TouchableOpacity>
 
             <TouchableWithoutFeedback
