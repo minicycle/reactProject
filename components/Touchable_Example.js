@@ -18,13 +18,15 @@ const Touchable_Example = () => {
   return (
     <SafeAreaView style={{flex:1}}>
         <View style={styles.container}>
-            <TouchableNativeFeedback 
-            onPress={()=>onPress('TouchableNativeFeedback Pressed')}>
-                <View style={styles.button}>
-                    <Text>Touchable Native Feedback(Only Android)</Text>
-                </View>  
-            </TouchableNativeFeedback> 
-
+            <View>
+                <TouchableNativeFeedback
+                    style={styles.button} 
+                    onPress={()=>onPress('TouchableNativeFeedback Pressed')}>
+                    <View>
+                        <Text>Touchable Native Feedback(Only Android)</Text>
+                    </View>  
+                </TouchableNativeFeedback> 
+            </View>
             <TouchableHighlight 
                 style={styles.button}
                 onPress={()=>onPress('TouchableHighlight Pressed')}>
