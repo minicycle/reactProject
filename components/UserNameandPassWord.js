@@ -8,7 +8,7 @@ const UserNameandPassWord = () => {
         alert('Email: '+email+'\nPassword: '+pass)
       }
   return (
-    <View style={{flex:5,marginTop:20}}>
+    <View style={{flex:1,marginTop:20}}>
       <TextInput
         value={email}
         onChangeText={(email)=>{setEmail(email)}}
