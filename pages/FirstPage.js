@@ -9,24 +9,16 @@ const FirstPage = ({ navigation }) => {
 
         <Button
           title="Go to Second Page"
-          onPress={() =>
-            navigation.navigate('Second Page', {
-             
-            })
-          }
+          onPress={() => navigation.navigate('Second Page', {})}
         />
         <Button
           title="Go to Third Page"
-          onPress={() =>
-            navigation.navigate('Third Page', {
-             
-            })
-          }
+          onPress={() => navigation.navigate('Third Page', {})}
         />
-        <View style={{bottom:'-40%'}}>
-        <Text style={styles.textBottomSytel}>
-          Thai-Nichi Institute of Technology
-        </Text>
+        <View style={{ bottom: '-40%' }}>
+          <Text style={styles.textBottomSytel}>
+            Thai-Nichi Institute of Technology
+          </Text>
         </View>
       </View>
     </View>
@@ -34,4 +26,3 @@ const FirstPage = ({ navigation }) => {
 }
 
 export default FirstPage
-
