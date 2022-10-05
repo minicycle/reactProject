@@ -10,7 +10,8 @@ import {
 import HomeScreen from './screens/HomeScreen'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import ProductScreen from './screens/ProductScreen'
-
+//import {createNativeStackNavigator} from '@react-navigation/native-stack'
+import DetailScreen from './screens/DetailScreen'
 const MyTheme = {
   ...DefaultTheme,
   colors: {
@@ -56,6 +57,28 @@ function CustomDrawerContent(props) {
   )
 }
 
+const Stack = createNativeStackNavigator()
+
+function ProductStack(){//แต่งข้างบน
+  return(
+    <Stack.Navigator
+      screenOptions={{
+        headerStyle:{
+          backgroundColor:'#0096DA'
+        },
+        headerTintColor:'#FFFF',
+        headerTitleStyle:{
+          fontWeight:'bold'
+        }
+      }}
+    >
+      <Stack.Screen name="Product" component={ProductScreen}/>
+      <Stack.Screen name="Detail" component={DetailScreen}/>
+    </Stack.Navigator>
+
+  )
+}
+
 const Drawer = createDrawerNavigator()
 
 function MyDrawer() {
@@ -65,7 +88,7 @@ function MyDrawer() {
       drawerContent={(props) => <CustomDrawerContent {...props} />}
     >
       <Drawer.Screen name="Home" component={HomeScreen} />
-      <Drawer.Screen name="ProductScreen" component={ProductScreen} />
+      <Drawer.Screen name="ProductScreen" component={ProductStack} />
     </Drawer.Navigator>
   )
 }
